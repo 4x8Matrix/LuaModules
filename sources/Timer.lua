@@ -47,7 +47,7 @@ end
 
 -- // Libary Methods
 function Timer.new()
-    local self = setmetatable({ }, Timer)
+    local self = setmetatable({ }, { __index = Timer })
 
     self.Time = 0
 
