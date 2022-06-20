@@ -23,8 +23,8 @@ function MutexObject:Lock()
 	end
 end
 
-function MutexObject:Unlock()
-	if self._Thread then
+function MutexObject:Unlock(Force)
+	if not Force and self._Thread then
 		assert(self._Thread == coroutine.running(), "Thread Exception: Attempted to call Mutex.Unlock")
 	end
 	

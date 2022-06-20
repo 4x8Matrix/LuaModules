@@ -29,7 +29,7 @@ Description: Locks the mutex object
 
 ---
 ```
-    Mutex:Unlock() -> Null
+    Mutex:Unlock(Force: bool) -> Null
 ```
 Description: Unlocks the mutex object
 
